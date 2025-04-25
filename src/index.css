@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+body{
+                color: #f40000;
+                /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+
+/* .button-selected{
+                color:#f28784 ;
+                border-radius: 5px;
+                border-bottom: 1px solid red;
+                padding: 10px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                flex: block;
+}
+
+.button-selected :hover{
+                border-radius: 15px;
+                color: red;
+                border-bottom: #f40000;
+                padding-bottom: 10px !important;
+} */
+
+/* hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md
+ text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px] */
