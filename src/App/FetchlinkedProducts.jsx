@@ -2,7 +2,7 @@
 'use client';
 import React from 'react';
 import { useFeaturedProducts } from '@/hooks/useFeaturedProducts';
-import LinkedProducts from './linkedProducts';
+import LinkedProducts from './LinkedProducts';
 
 const FetchlinkedProducts = ({ number }) => {
     const { products, loading, error } = useFeaturedProducts(number);
