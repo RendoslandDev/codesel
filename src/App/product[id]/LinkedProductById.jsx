@@ -1,5 +1,5 @@
 import React from 'react'
-import UseRelatedProduct from '../useRelatedProduct'
+import UseRelatedProduct from '../UseRelatedProduct'
 
 
 export default function LinkedProductById({product}) {
