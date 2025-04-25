@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../../Components/NavBar'
 import Footer from '../../Components/Footer'
-import FetchProduct from './fetchAllProductsArrivals'
+import FetchProduct from './FetchAllProductsArrivals'
 
 export default function page() {
   return (
