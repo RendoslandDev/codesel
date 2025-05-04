@@ -17,6 +17,7 @@ import AdminPage from './Admin/AdminPage.jsx'
 
 
 const router = createBrowserRouter([
+  {basename:process.env.VITE_BASE_PATH || '/'},
   { path: '/', element: <App /> },
   {path:'/product/:id',element:<Pages/>},
   {path:'/contact',element:<Contact/>},
