@@ -1,23 +1,8 @@
 {
-                "routes": [
-                  {
-                    "handle": "filesystem"
-                  },
-                  {
-                    "src": "/",
-                    "dest": "/"
-                  },
-                  {
-                    "src": "/Offers",
-                    "dest": "/"
-                  },
-                  {
-                    "src": "/About",
-                    "dest": "/"
-                  },
-                  {
-                    "src": "/Contact",
-                    "dest": "/"
-                  }
-                ]
-              }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
