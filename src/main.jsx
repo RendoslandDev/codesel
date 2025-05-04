@@ -6,14 +6,13 @@ import App from './App.jsx'
 
 
 
-
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Contact from './App/contact/page.jsx'
 import Arrival from './App/Arrival/page.jsx'
 import About from './App/About/page.jsx'
 import Offers from './App/Offers/page.jsx'
 import Pages from './App/product[id]/Pages.jsx'
+import AdminPage from './Admin/AdminPage.jsx'
 
 
 
