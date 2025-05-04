@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function NavBar() {
@@ -58,21 +59,21 @@ export default function NavBar() {
           <div className="text-lg ml-10 flex justify-around items-baseline space-x-8 !mx-auto"> 
             <button className='bg-red-600 inline-flex items-center justify-around m-2 p-2 text-gray-800 dark:text-gray-200 focus:outline-none font-extrabold'>CLOUDSALES</button>
             <div className='inline-flex justify-center gap-5'>
-            <a href="/" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+            <Link href="/" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Home
-                    </a>
-                    <a href="/arrival" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                    </Link>
+                    <Link href="/arrival" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         arrivals
-                    </a>
-                    <a href="/offers" className={linkClasses.trim()}>
+                    </Link>
+                    <Link href="/offers" className={linkClasses.trim()}>
                         offers
-                    </a>
-                    <a href="/about" className="uppercase block px-3 py-1 mb-1 rounded-md text-lg font-bold border-b-2 border-red-300 !pb-[1px] !text-red-300 hover:text-[#f6d00c] hover:border-b hover:border-[#f6d00c] dark:hover:text-white">
+                    </Link>
+                    <Link href="/about" className="uppercase block px-3 py-1 mb-1 rounded-md text-lg font-bold border-b-2 border-red-300 !pb-[1px] !text-red-300 hover:text-[#f6d00c] hover:border-b hover:border-[#f6d00c] dark:hover:text-white">
                         about
-                    </a>
-                    <a href="/contact  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                    </Link>
+                    <Link href="/contact  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Contact
-                    </a>
+                    </Link>
             </div>
             <button className='bg-red-600 inline-flex items-center justify-around m-2 p-2 text-ellipsis text-gray-800 dark:text-gray-200  focus:outline-none font-extralight'>
               SEE CATALOG</button>
@@ -84,18 +85,18 @@ export default function NavBar() {
                 <div className="md:hidden">
                     <div className="absolute px-2 pb-3 space-y-1 pt-2 z-10 bg-white w-[300px]">
                           {/* <NavbarLinks /> */}
-                          <a href="/  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          <Link href="/  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Home
-                          </a>
-                          <a href="/contact  " className="uppercase hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          </Link>
+                          <Link href="/contact  " className="uppercase hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Contact
-                          </a>
-                          <a href="/offers  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          </Link>
+                          <Link href="/offers  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Offer
-                          </a>
-                          <a href="/about  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          </Link>
+                          <Link href="/about  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         About
-                    </a>
+                    </Link>
                     </div>
                 </div>
               )}

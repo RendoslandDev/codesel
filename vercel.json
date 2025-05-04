@@ -4,8 +4,20 @@
                     "handle": "filesystem"
                   },
                   {
-                    "src": "/.*",
-                    "dest": "/index.html"
+                    "src": "/",
+                    "dest": "/"
+                  },
+                  {
+                    "src": "/Offers",
+                    "dest": "/"
+                  },
+                  {
+                    "src": "/About",
+                    "dest": "/"
+                  },
+                  {
+                    "src": "/Contact",
+                    "dest": "/"
                   }
                 ]
               }
