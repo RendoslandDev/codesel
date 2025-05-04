@@ -59,19 +59,19 @@ export default function NavBar() {
           <div className="text-lg ml-10 flex justify-around items-baseline space-x-8 !mx-auto"> 
             <button className='bg-red-600 inline-flex items-center justify-around m-2 p-2 text-gray-800 dark:text-gray-200 focus:outline-none font-extrabold'>CLOUDSALES</button>
             <div className='inline-flex justify-center gap-5'>
-            <Link href="/" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+            <Link to="/" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Home
                     </Link>
-                    <Link href="/arrival" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                    <Link to="/arrival" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         arrivals
                     </Link>
-                    <Link href="/offers" className={linkClasses.trim()}>
+                    <Link to="/offers" className={linkClasses.trim()}>
                         offers
                     </Link>
-                    <Link href="/about" className="uppercase block px-3 py-1 mb-1 rounded-md text-lg font-bold border-b-2 border-red-300 !pb-[1px] !text-red-300 hover:text-[#f6d00c] hover:border-b hover:border-[#f6d00c] dark:hover:text-white">
+                    <Link to="/about" className="uppercase block px-3 py-1 mb-1 rounded-md text-lg font-bold border-b-2 border-red-300 !pb-[1px] !text-red-300 hover:text-[#f6d00c] hover:border-b hover:border-[#f6d00c] dark:hover:text-white">
                         about
                     </Link>
-                    <Link href="/contact  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                    <Link to="/contact  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Contact
                     </Link>
             </div>
@@ -85,16 +85,16 @@ export default function NavBar() {
                 <div className="md:hidden">
                     <div className="absolute px-2 pb-3 space-y-1 pt-2 z-10 bg-white w-[300px]">
                           {/* <NavbarLinks /> */}
-                          <Link href="/  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          <Link to="/  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Home
                           </Link>
-                          <Link href="/contact  " className="uppercase hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          <Link to="/contact  " className="uppercase hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Contact
                           </Link>
-                          <Link href="/offers  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          <Link to="/offers  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Offer
                           </Link>
-                          <Link href="/about  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          <Link to="/about  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         About
                     </Link>
                     </div>
