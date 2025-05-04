@@ -7,7 +7,7 @@ import App from './App.jsx'
 
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Contact from './App/contact/page.jsx'
+import Contact from './App/Contact/page.jsx'
 import Arrival from './App/Arrival/page.jsx'
 import About from './App/About/page.jsx'
 import Offers from './App/Offers/page.jsx'
@@ -17,7 +17,6 @@ import AdminPage from './Admin/AdminPage.jsx'
 
 
 const router = createBrowserRouter([
-  {basename:process.env.VITE_BASE_PATH || '/'},
   { path: '/', element: <App /> },
   {path:'/product/:id',element:<Pages/>},
   {path:'/contact',element:<Contact/>},
@@ -29,6 +28,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}/>
-    {/* <AdminPage/> */}
   </StrictMode>,
 )

@@ -7,11 +7,8 @@ export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false)
 
     const linkClasses = `
-    uppercase block px-3 py-1 mb-1 rounded-md 
-    text-lg font-bold border-b-2 border-red-300 
-    pb-[1px] text-red-300 hover:text-[#f6d00c] 
-    hover:border-b hover:border-[#f6d00c] 
-    dark:hover:text-white
+    uppercase block px-3 py-1 mb-1 rounded-md text-lg font-bold border-b-2 border-red-300 pb-[1px]
+    text-red-300 hover:!text-[#f6d00c] hover:border-[#f6d00c] dark:hover:text-white
   `;
 
   return (
@@ -62,16 +59,16 @@ export default function NavBar() {
             <Link to="/" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Home
                     </Link>
-                    <Link to="/arrival" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                    <Link to="/arrival" className="{linkClasses.trim()}">
                         arrivals
                     </Link>
-                    <Link to="/offers" className={linkClasses.trim()}>
+                    <Link to="/offers" className="{linkClasses.trim()}">
                         offers
                     </Link>
-                    <Link to="/about" className="uppercase block px-3 py-1 mb-1 rounded-md text-lg font-bold border-b-2 border-red-300 !pb-[1px] !text-red-300 hover:text-[#f6d00c] hover:border-b hover:border-[#f6d00c] dark:hover:text-white">
+                    <Link to="/about" className="linkClasses.trim()}">
                         about
                     </Link>
-                    <Link to="/contact  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                    <Link to="/contact  " className="{linkClasses.trim()}">
                         Contact
                     </Link>
             </div>

@@ -52,7 +52,7 @@ function App() {
     <>
       <NavBar />
       <main className="sm:m-12 lg-m-[4.5rem] !mt-[155px] sm:!mt-[190px] font-serif loading-lazy">
-        <p className="font-bold font-serif text-2xl">{message}</p>
+        {/* <p className="font-bold font-serif text-2xl">{message}</p> */}
         <div className="container text-2xl font-serif m-auto px-15 text-black ">
           <h2>MATTRESS | BEDDING | APARTMENT | SOFAS</h2>
           <p className="font-mono mb-5">
