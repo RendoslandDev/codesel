@@ -15,7 +15,6 @@ const FetchlinkedProducts = ({ number }) => {
         return <div className="text-center my-20">Loading...</div>;
     }
 
-  // return <linkedProducts products={products} />;
     return <LinkedProducts products={products} />;
 };
 

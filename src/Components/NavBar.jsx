@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
 
     const [isOpen, setIsOpen] = useState(false)
+    const [isActive , setIsActive] = useState(false)
 
     const linkClasses = `
-    uppercase block px-3 py-1 mb-1 rounded-md text-lg font-bold border-b-2 border-red-300 pb-[1px]
-    text-red-300 hover:!text-[#f6d00c] hover:border-[#f6d00c] dark:hover:text-white
+    uppercase block px-3 py-1 mb-1 uppercase font-serif font-2xl rounded-md text-lg font-bold border-b-2 border-red-300 pb-[1px] text-red-300  hover:text-[#f6d00c] hover:border-[#f6d00c] dark:hover:text-white
   `;
 
   return (
@@ -45,35 +45,36 @@ export default function NavBar() {
                                                </svg>
               </button>
                       </div>
-                      
-                            
-                      
-                      <SearchInput/>                      
+                      <SearchInput/>
                </div>
         </div>
-        
+
         <div className='hidden md:block w-full'>
-          <div className="text-lg ml-10 flex justify-around items-baseline space-x-8 !mx-auto"> 
+          <div className="text-lg ml-10 flex justify-around items-baseline space-x-8 !mx-auto">
             <button className='bg-red-600 inline-flex items-center justify-around m-2 p-2 text-gray-800 dark:text-gray-200 focus:outline-none font-extrabold'>CLOUDSALES</button>
             <div className='inline-flex justify-center gap-5'>
-            <Link to="/" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+            <Link to="/" className="uppercase font-serif  rounded px-2 hover:border-b-2 border-red-500">
                         Home
                     </Link>
-                    <Link to="/arrival" className="{linkClasses.trim()}">
+                    <Link to="/arrival" className="uppercase  rounded px-2">
                         arrivals
                     </Link>
-                    <Link to="/offers" className="{linkClasses.trim()}">
+                    <Link to="/offers" className="uppercase  rounded px-2">
                         offers
                     </Link>
-                    <Link to="/about" className="linkClasses.trim()}">
+                    <Link to="/about" className="uppercase  rounded px-2">
                         about
                     </Link>
-                    <Link to="/contact  " className="{linkClasses.trim()}">
-                        Contact
+                    <Link to="/contact" className="uppercase  rounded px-2">
+                        contact
                     </Link>
             </div>
-            <button className='bg-red-600 inline-flex items-center justify-around m-2 p-2 text-ellipsis text-gray-800 dark:text-gray-200  focus:outline-none font-extralight'>
-              SEE CATALOG</button>
+            <a
+                href="./public/catalog.pdf"
+                download="filename.pdf"
+             className='bg-red-600 inline-flex items-center justify-around m-2 p-2 text-ellipsis text-gray-800 dark:text-gray-200  focus:outline-none font-extralight'>
+                <button className='text-white font-bold'>SEE CATALOG</button>
+            </a>
 
                           </div>
               </div>
@@ -97,7 +98,7 @@ export default function NavBar() {
                     </div>
                 </div>
               )}
-              
+
               {/* ended mobile menu */}
       </div>
    </>
@@ -147,18 +148,3 @@ const SearchInput = () => {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

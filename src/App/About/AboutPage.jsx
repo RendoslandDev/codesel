@@ -13,16 +13,6 @@ export default function AboutPage() {
 
             <div className="mt-[110px] py-16 bg-white font-mono">
                 <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-
-                    {/* <div className='container  text-center m-auto text-gray-600 md:px-12 xl:px-6 bg-white  font-mono p-10 rounded'>
-                        <h2 className='text-black font-serif uppercase font-bold mb-2'>our concepts</h2>
-                        <span className='w-1/4'>We seek to offer customer's optimal accessibility to comfort and minority , via a quality / price ratio. Provding a complete 
-                            , diverse range of furniture and decoration products that cater to our customer's lifestyle needs 
-                            as they progress throughlife's through life's stages from baby to adulthood..
-                          </span>
-                    </div> */}
-
-                   
                     
                                     <div className="space-y-6 md:space-y-0 lg:flex md:gap-6 lg:items-center lg:gap-12">
                                         <div className="w-full lg:w-[50%] mb-6">
@@ -47,15 +37,13 @@ export default function AboutPage() {
                                                 is to ensure you get the best sleep possible,
                                                 tailored to your unique needs.
                                             </p>
-                                            <p className="mt-4 text-gray-700">
-                                                At Mattress Home, we understand that a good night's
-                                                sleep is essential for a healthy and productive
-                                                life. That’s why we offer a diverse range of
-                                                mattresses from top brands such as Royal Foam, Latex
-                                                Foam, Ashfoam, and various foreign brands. Whether
-                                                you're looking for a new mattress or need to
-                                                rejuvenate your existing one, we've got you covered.
-                                            </p>
+                <blockquote class="text-center text-2xl font-semibold text-gray-900 italic dark:text-red-300">
+                Best
+                <span class="relative shadow-xl p-4 rounded border-2 inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 m-2 before:bg-white ">
+                    <span class="relative text-red-300 dark:text-gray-950 font-serif font-thin">SALES</span>
+                </span>
+                of all the time, people love it that we gave our best.
+                </blockquote>
                                             <p className="mt-4 text-gray-700 font-mono">
                                                 We are here to solve your sleep needs. Give us a
                                                 call or chat with us today to find the perfect

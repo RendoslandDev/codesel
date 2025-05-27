@@ -8,7 +8,14 @@ import React from 'react'
 
       <main className='container flex flex-row justify-center'>
         <SideBar />
-        <section className='w-[80%]  shadow'></section>
+        <section className='w-[80%]  shadow flex gap-5 '>
+             
+             <div className='border-2 rounded w-5xl h-1/2'></div>
+             <div className='border-2 rounded w-5xl h-1/2 '></div>
+             <div className='border-2 rounded w-5xl h-1/2'></div>
+
+
+        </section>
       </main>
 
                            
@@ -29,7 +36,7 @@ function Header(props) {
                             <a
                                 href="/contact"
                                 className="rounded-md bg-red-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400">
-                                Contact Us
+                                Customer care
                             </a>
                             <a
                                 href="/about"
@@ -54,7 +61,7 @@ function SideBar() {
           <a href='/Settings' className='rounded-md shadow px-3.5 w-1/2 py-2.5 text-sm  uppercase text-black'>Settings</a>
         </div>
         <div className='flex flex-row justify-center'>
-          <a href='/Logout' className='rounded-md bg-red-400 px-10 py-2.5 text-sm font-semibold text-white shadow-sm font-serif uppercase'>Logout</a>
+          <a href='/Logout' className='rounded-md bg-red-400 mr-10  px-10 py-2.5 text-sm font-semibold text-white shadow-sm font-serif uppercase'>Logout</a>
         </div>
         </div>
     </section>

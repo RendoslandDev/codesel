@@ -1,60 +1,38 @@
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ });
-  const [token, setToken] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
-  // Get token when component mounts
-  useEffect(() => {
-    const storedToken = localStorage.getItem('token');
-    setToken(storedToken);
-  }, []);
-  
 
+
+
+   const changeHandler = (e) => {
+    setFormData({...formData, [e.target.name]: e.target.value });
+   }
+    const form = useRef();
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
-        setError(null);
-
-        try {
-            if (!token) {
-                throw new Error('You must be logged in to submit the form');
-            }
-
-            const response = await fetch('/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
-                body: JSON.stringify(formData)
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'Failed to send message');
-            }
-
-            // Success handling...
-        } catch (err) {
-            setError(err.message);
-        } finally {
-            setIsLoading(false);
-        }
-    };
-   
 
 
+        emailjs.sendForm('service_kzf1qtd','template_1r49h62', form.current, 'p-HNmoeFLIKzetwh7')
+
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
 
 
-
+    }
 
 
 
   return (
-    <form  onSubmit={handleSubmit} className="py-16 font-mono">
+    <form  ref={form} onSubmit={handleSubmit} className="py-16 font-mono">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 grid-cols-1">
             <div className="lg:mb-0 mb-10">
@@ -139,24 +117,24 @@ export default function ContactForm() {
                 <input
                     type="text"
                     name="name"
-                    value={formData.name}
-                    // onChange={(e) => setFormData({...formData, name:e.target.value})}
+                    value={formData.name || ''}
+                    onChange={changeHandler}
                     className="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-sm  focus:outline-none pl-4 mb-10 border-t-2 border-amber-600"
                     placeholder="Name"
                 />
                 <input
                     type="text"
                     name="email"
-                    value={formData.email}
-                    // onChange={(e) => setFormData({...formData, email:e.target.value})}
+                    value={formData.email || ''}
+                    onChange={changeHandler}
                     className="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded  focus:outline-none pl-4 mb-10 border-t-2 border-amber-600"
                     placeholder="Email"
                 />
                 <input
                     type="text"
                     name="phone"
-                    value={formData.phone}
-                    // onChange={(e) => setFormData({...formData, phone:e.target.value})}
+                    value={formData.phone || ''}
+                    onChange={changeHandler}
                     className="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded  focus:outline-none pl-4 mb-10 border-t-2 border-amber-600"
                     placeholder="Phone"
                 />
@@ -174,7 +152,7 @@ export default function ContactForm() {
                                 checked={
                                     formData.preferredMethod === 'Email'
                                 }
-                                // onChange={handleChange}
+                                onChange={changeHandler}
                                 className=" checked:bg-no-repeat checked:bg-center checked:border-yellow-500 checked:bg-yellow-100"
                             />
                             <label
@@ -192,7 +170,7 @@ export default function ContactForm() {
                                 checked={
                                     formData.preferredMethod === 'Phone'
                                 }
-                                // onChange={handleChange}
+                                onChange={changeHandler}
                                 className=" checked:bg-no-repeat checked:bg-center checked:border-indigo-500 checked:bg-indigo-100"
                             />
                             <label
@@ -207,19 +185,18 @@ export default function ContactForm() {
                     type="text"
                     name="message"
                     value={formData.message}
-                    // onChange={(e) => setFormData({...formData, message:e.target.value})}
+                    onChange={changeHandler}
                     className="w-full min-h-32 text-gray-600
                     placeholder-gray-400 bg-transparent text-lg
                     shadow-sm font-normal leading-7 rounded-xl border
                     border-gray-200 focus:outline-none pl-4 mb-10"
                     placeholder="Messagen"
                 />
-                      <button 
-        type="submit" 
-        disabled={!token || isLoading}
-        className={`${(!token || isLoading) ? 'w-full h-12 border border-red-500 text-red-500 text-base font-semibold leading-6 rounded-lg transition-all duration-700 hover:bg-red-400 bg-white shadow-sm' : ''}`}
+                      <button
+        type="submit"
+        className='w-full h-12 border border-red-500 text-red-500 text-base font-semibold leading-6 rounded-lg transition-all duration-700 hover:bg-red-400 bg-white shadow-sm'
       >
-        {isLoading ? 'Sending...' : 'Send Message'}
+    Send Message
       </button>
             </div>
         </div>
