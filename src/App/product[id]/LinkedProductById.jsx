@@ -1,8 +1,13 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import UseRelatedProduct from '../UseRelatedProduct'
 
 
+import AddToCartButton from '../../Components/AddToCartButton'
+import { useNavigate } from 'react-router-dom'
+
 export default function LinkedProductById({product}) {
+    const navigate = useNavigate();
+
   return (
     <>
     <div className='container mt-[190px] flex justify-center items-center px-6 text-gray-600 md:px-12 xl:px-6'>
@@ -17,31 +22,41 @@ export default function LinkedProductById({product}) {
                                               height={800}
                                           />
       </div>
-      
+
       <div className='w-full lg:w-[45%] m-2 font-serif'>
         <p className='text-xl font-bold font-serif p-5'>GH₵ { product.price}</p>
-        
+
             <div className='space-y-6 mb-4'>
               <p>
               {product.description}
               </p>
         </div>
 
-        <a
+        {/* <a
                               href="/"
                               className=" text-white font-extrabold font-mono text-xl border border-red-300 p-2 rounded uppercase bg-red-600">
                               add to basket
-        </a>
+        </a> */}
+        {/* <button className='bg-red-600 text-white font-extrabold font-mono text-xl border border-red-300 p-2 rounded uppercase'>
+          add to basket</button> */}
+
+
+    <div className="flex items-center space-x-4">
+      <AddToCartButton product={product}  />
+    </div>
+
+
+
         <hr className='mt-5'/>
         <div className='flex flex-row gap-3'>
         <p>categories :</p>
               <p>{ product.name}</p>
         </div>
       </div>
-      
+
     </div>
-    
-    
+
+
   </div>
       <hr className='ml-50 mr-50' />
       <div className='flex flex-row justify-evenly text-black font-serif font-bold'>
@@ -61,7 +76,7 @@ export default function LinkedProductById({product}) {
      <p className='font-mono text-4xl'>Related products</p>
       <UseRelatedProduct productId={3}/>
       </div>
-      
+
     </>
   )
 }

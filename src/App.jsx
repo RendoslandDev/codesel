@@ -4,7 +4,7 @@ import Footer from "@/Components/Footer";
 import FetchlinkedProducts from "./App/FetchlinkedProducts";
 
 function App() {
-  // const [count, setCount] = useState(0)
+
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -95,8 +95,20 @@ function App() {
 }
 
 function MobileMethod(props) {
+    const [loading, setLoading] = useState(false)
+    const [error , setError ]= useState(false)
   return (
     <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6 mb-10">
+        {loading ? (
+                <div className="flex justify-center items-center h-64">
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+                </div>
+              ) : error ? (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                  <strong className="font-bold">Error: </strong>
+                  <span className="block sm:inline">{error}</span>
+                </div>
+              ) :(
       <div className="space-y-6 md:space-y-0 lg:flex md:gap-6 lg:item-center lg:gap-12">
         <div className="w-full lg:w-[50%] mb-6">
           <img
@@ -165,6 +177,7 @@ function MobileMethod(props) {
           </div>
         </div>
       </div>
+              )}
     </div>
   );
 }

@@ -6,14 +6,14 @@ import valuesData from '../data/valuesData'
 export default function AboutPage() {
     return (
         <>
-            
-            
+
+
 
 
 
             <div className="mt-[110px] py-16 bg-white font-mono">
                 <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-                    
+
                                     <div className="space-y-6 md:space-y-0 lg:flex md:gap-6 lg:items-center lg:gap-12">
                                         <div className="w-full lg:w-[50%] mb-6">
                                             <img
@@ -55,7 +55,7 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                             </div>
-                 
-             </>   
+
+             </>
   )
 }

@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from "react-router-dom"
+import CartIcon from '../../Components/CartIcon'
 
 export default function ArrivalTrail({products}) {
+
+    const [loading , setLoading ] = useState(false)
+    const [error , setError ] = useState(false)
+
   return (
     <>
       <div>
+
  <section className='py-12 bg-white sm:py-16 lg:py-20 font-light'>
   <div className='grid grid-cols-2 mt-10 gap-5 lg-mt-16 lg:gap-4 lg:grid-cols-4'>
                 {products.map(product => (
@@ -42,19 +48,22 @@ export default function ArrivalTrail({products}) {
                                                 )}
                                             </div>
                                                                                                   </div>
-                                                                                                  <div>
+                                                                                                  <div className='flex justify-between'>
                                     <p className='text-xl font-bold font-serif mb-10'>GH₵{ product.price}</p>
+
+
+                                    <CartIcon product={product}/>
+
                                                                                                   </div>
                                                                                                   </div>
                                                                   </Link>
-                                                                                  
+
                                                   </div>
                 ))}
                                                                   </div>
       </section>
+
     </div>
     </>
   )
 }
-
-

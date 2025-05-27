@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { CgSoftwareDownload } from "react-icons/cg";
 
 export default function NavBar() {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isActive , setIsActive] = useState(false)
+    const [modal , setModal ] = useState(false)
+
+
+    const toggleModal = () => {
+        setModal(!modal)
+    }
 
     const linkClasses = `
     uppercase block px-3 py-1 mb-1 uppercase font-serif font-2xl rounded-md text-lg font-bold border-b-2 border-red-300 pb-[1px] text-red-300  hover:text-[#f6d00c] hover:border-[#f6d00c] dark:hover:text-white
@@ -46,6 +52,22 @@ export default function NavBar() {
               </button>
                       </div>
                       <SearchInput/>
+                      <a
+                    //   onClick={toggleModal}
+                    href='/Login'
+                        className='text-md font-serif text-black flex shadow px-4 py-2'>
+                      login
+                          {/* <CgSoftwareDownload/> */}
+                      </a>
+
+                      {
+                        modal &&
+                        <div className='modal '>
+                            <div className=' h-[400px] items-center mt-50 border-2 w-1/2 flex justify-center m-auto'>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam consectetur commodi obcaecati sint, minus ex. Molestiae ab perferendis ex eos sint ipsam officiis aspernatur. Delectus est incidunt repellendus corrupti ut.
+                            </div>
+                        </div>
+                      }
                </div>
         </div>
 
@@ -70,8 +92,8 @@ export default function NavBar() {
                     </Link>
             </div>
             <a
-                href="./public/catalog.pdf"
-                download="filename.pdf"
+                href="./catalog.pdf"
+                download="Catalogue.pdf"
              className='bg-red-600 inline-flex items-center justify-around m-2 p-2 text-ellipsis text-gray-800 dark:text-gray-200  focus:outline-none font-extralight'>
                 <button className='text-white font-bold'>SEE CATALOG</button>
             </a>
@@ -83,18 +105,18 @@ export default function NavBar() {
                 <div className="md:hidden">
                     <div className="absolute px-2 pb-3 space-y-1 pt-2 z-10 bg-white w-[300px]">
                           {/* <NavbarLinks /> */}
-                          <Link to="/  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          <a href="/" className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Home
-                          </Link>
-                          <Link to="/contact  " className="uppercase hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          </a>
+                          <a href="/contact  " className="uppercase hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Contact
-                          </Link>
-                          <Link to="/offers  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          </a>
+                          <a href="/offers  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         Offer
-                          </Link>
-                          <Link to="/about  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
+                          </a>
+                          <a href="/about  " className="uppercase hover:text-[#f6d00c] hover:border-b dark:hover:text-white px-3 py-1 mb-1 rounded-md text-lg font-bold block !text-red-300 border-b-2 border-red-300 !pb-[1px]">
                         About
-                    </Link>
+                    </a>
                     </div>
                 </div>
               )}
