@@ -7,7 +7,7 @@ import App from './App.jsx'
 
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Contact from './App/Contact/page.jsx'
+// import contact from './App/Contact/Contact.jsx'
 import Arrival from './App/Arrival/page.jsx'
 import About from './App/About/page.jsx'
 import Offers from './App/Offers/page.jsx'
@@ -27,7 +27,7 @@ import CartPage from './App/Cart/CartPage.jsx'
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
   {path:'/product/:id',element:<Pages/>},
-  {path:'/contact',element:<Contact/>},
+//   {path:'/contact', element:<contact/>},
   {path:'/arrival',element:<Arrival/>},
   { path: '/about', element: <About /> },
   {path:'/offers', element:<Offers/>},
