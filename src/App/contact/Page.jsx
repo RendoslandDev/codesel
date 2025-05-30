@@ -3,7 +3,7 @@ import ContactForm from './Contact'
 import NavBar from '../../Components/NavBar'
 import Footer from '../../Components/Footer'
 
-export default function Page() {
+export default function page() {
   return (
                   <>
                                   <NavBar/>
