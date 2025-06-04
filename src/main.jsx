@@ -22,7 +22,7 @@ import Login from './Admin/Login.jsx'
 import Error from './Error.jsx'
 import { CartProvider } from './App/Contexts/CartContext.jsx'
 import CartPage from './App/Cart/CartPage.jsx'
-import Contact from './App/Contact/Page.jsx'
+
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
   {path:'/Login',element:<Login/>},
   {path:'/Error',element:<Error/>},
 {path:'/CartPage',element:<CartPage/>},
-{path:'/Contact', element:<Contact/>}
+
 ])
 
 createRoot(document.getElementById('root')).render(
