@@ -22,7 +22,7 @@ import Login from './Admin/Login.jsx'
 import Error from './Error.jsx'
 import { CartProvider } from './App/Contexts/CartContext.jsx'
 import CartPage from './App/Cart/CartPage.jsx'
-import Contact from './App/Contact/page.jsx'
+import Contact from './App/Contact/Contact.jsx'
 
 
 const router = createBrowserRouter([
