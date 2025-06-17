@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import NavBar from '../../Components/NavBar'
-import Footer from '../../Components/Footer'
+import NavBar from '../Components/NavBar'
+import Footer from '../Components/Footer'
 
 
 export default function ContactForm() {
@@ -38,9 +38,6 @@ export default function ContactForm() {
     <>
     <NavBar/>
     <main className='mt-[110px]'>
-
-
-
     <form  ref={form} onSubmit={handleSubmit} className="py-16 font-mono">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 grid-cols-1">
